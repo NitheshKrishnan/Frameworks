@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="a" class="edu.jspiders.setterinjection.beans.ClassA">
+	
+		<property name="list">
+	
+			<list>
+				<value>a</value>
+				<value>b</value>
+				<value>a</value>
+			</list>
+	
+		</property>
+	
+	</bean>
+	
+	<bean id="b" class="edu.jspiders.setterinjection.beans.ClassB">
+	
+		<property name="set">
+	
+			<set>
+				<value>10.5</value>
+				<value>11.5</value>
+				<value>10.5</value>
+			</set>
+	
+		</property>
+	
+	</bean>
+	
+	<bean id="c" class="edu.jspiders.setterinjection.beans.ClassC">
+	
+		<property name="map">
+	
+			<map>
+				<entry key="65" value="A"/>
+				<entry key="66" value="B"/>
+				<entry key="67" value="C"/>
+				<entry key="68" value="D"/>
+			</map>
+	
+		</property>
+	
+	</bean>
+		
+</beans>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="motherboard" class="edu.jspiders.explicitbeanwiring.bean.MotherBoard">
+	
+	<property name="brand" value="MB"/>
+	<property name="version" value="2.0"/>
+	<property name="price" value="8000"/>
+	
+	</bean>
+	
+	<bean id="processor" class="edu.jspiders.explicitbeanwiring.bean.Processor">
+	
+	<property name="brand" value="Intel"/>
+	<property name="version" value="Core i7"/>
+	<property name="price" value="12000"/>
+	
+	</bean>
+	
+	<bean id="harddisk" class="edu.jspiders.explicitbeanwiring.bean.Harddisk">
+	
+	<property name="brand" value="Seagate"/>
+	<property name="capacity" value="1024"/>
+	<property name="price" value="10000"/>
+	
+	</bean>
+	
+	<bean id="ram" class="edu.jspiders.explicitbeanwiring.bean.Ram">
+	
+	<property name="brand" value="Kingston"/>
+	<property name="capacity" value="8"/>
+	<property name="price" value="4000"/>
+	
+	</bean>
+	
+	<bean id="cpu" class="edu.jspiders.explicitbeanwiring.bean.CPU">
+	
+	<constructor-arg index="0" ref="motherboard"/>
+	<constructor-arg index="1" ref="processor"/>
+	<constructor-arg index="2" ref="harddisk"/>
+	<constructor-arg index="3" ref="ram"/>
+	
+	</bean>
+
+</beans>
